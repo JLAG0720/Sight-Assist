@@ -1,6 +1,4 @@
-Sobre esta extensión
-
-El menú se compone de 7 opciones diferentes:
+Sight Assit es una extension de Navegador que consiste de un menú se compone de 7 opciones diferentes:
 - Invertir Colores: Invierte los colores de la pagina, lo que le permite al usuario ajustar el tono de la pagina a uno que se ajuste mejor a su sensibilidad al contraste.
 - Tamaño del Texto: Cada vez que se hace clic en esta opción, cambia el texto de la pagina hasta 3 tamaños diferentes, cuando alcanza el tamaño máximo, el texto regresa a su tamaño original.
 - Tamaño del Cursor: Aumenta el tamaño del cursor, haciéndolo mas fácil de ubicarlo.

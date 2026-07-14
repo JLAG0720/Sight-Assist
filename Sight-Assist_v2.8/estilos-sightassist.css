@@ -1,0 +1,169 @@
+/* ══════════════════════════════════════════════════════════════════════════ */
+/* POPUP — estilos del menú de la extensión                                  */
+/* Todos los selectores están bajo .sa-popup para no afectar páginas         */
+/* ══════════════════════════════════════════════════════════════════════════ */
+
+/* Reset y base — solo aplica dentro del popup */
+.sa-popup *,
+.sa-popup *::before,
+.sa-popup *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sa-popup {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  min-width: 320px;
+  padding: 10px;
+}
+
+/* Menú */
+.sa-popup .Menu {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.sa-popup .Menu li:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Botones — selector específico, nunca afecta la página */
+.sa-popup button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100px;
+  padding: 8px 6px;
+
+  background-repeat: no-repeat;
+  background-position: center 8px;
+  background-size: 56px 56px;
+
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+
+  border: 2px solid #085db9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.1s ease, opacity 0.2s ease;
+}
+
+.sa-popup button:hover {
+  border-color: #ffd900;
+  transform: scale(1.03);
+}
+
+.sa-popup button:active {
+  color: #ffd900;
+  transform: scale(0.97);
+}
+
+.sa-popup button.activo {
+  border-color: #a3d000;
+  box-shadow: 0 0 0 2px #a3d00066;
+}
+
+/* Iconos por botón */
+.sa-popup #Invertir {
+  background-image: url("InvertirColoresIcono.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 160px;
+}
+
+.sa-popup #TamanoTexto {
+  background-image: url("TamanoTextoIcono.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 155px;
+}
+
+.sa-popup #Cursor {
+  background-image: url("CambiarTamanoCursorIcono.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 155px;
+}
+
+.sa-popup #LineaLectura {
+  background-image: url("LineaLecturaIcono.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 155px;
+}
+
+.sa-popup #Subrayar {
+  background-image: url("SubrayarTexIcono.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 155px;
+}
+
+.sa-popup #LectordeVoz {
+  background-image: url("LecturaVozIcono.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 155px;
+}
+
+.sa-popup #ReiniciarCambios {
+  height: 72px;
+  background-image: url("ReiniciarCambiosIcono.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 375px 255px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════ */
+/* CONTENT SCRIPT — estilos inyectados en la página                          */
+/* Prefijo sa- en todos los selectores para no colisionar con el sitio       */
+/* ══════════════════════════════════════════════════════════════════════════ */
+
+/* Invertir colores */
+body.sa-contraste {
+  filter: invert(1) hue-rotate(180deg);
+  transition: filter 0.3s ease;
+}
+
+body.sa-contraste img,
+body.sa-contraste video {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Cursor grande */
+body.sa-cursor-grande,
+body.sa-cursor-grande * {
+  cursor: url("CursorGrande.png"), auto !important;
+}
+
+/* Subrayado de texto */
+.sa-subrayado {
+  text-decoration: underline;
+  text-decoration-color: rgb(140, 0, 255);
+  text-decoration-thickness: 5px;
+}
+
+/* Línea de lectura */
+#sa-linea-lectura {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(163, 208, 0);
+  pointer-events: none;
+  z-index: 2147483647;
+  display: none;
+  transition: none !important;
+}

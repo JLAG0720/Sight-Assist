@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="estilos-sightassist.css" />
+  </head>
+  <body class="sa-popup">
+    <ul class="Menu" role="menu" aria-label="Opciones de accesibilidad">
+
+      <li role="none">
+        <button id="Invertir" type="button" data-accion="invertirColores"
+                aria-label="Invertir colores">
+          Invertir Colores
+        </button>
+      </li>
+
+      <li role="none">
+        <button id="TamanoTexto" type="button" data-accion="cambiarTexto"
+                aria-label="Aumentar tamaño del texto">
+          Tamaño del Texto
+        </button>
+      </li>
+
+      <li role="none">
+        <button id="Cursor" type="button" data-accion="cambiarCursor"
+                aria-label="Cambiar tamaño del cursor">
+          Tamaño del Cursor
+        </button>
+      </li>
+
+      <li role="none">
+        <button id="LineaLectura" type="button" data-accion="lineaLectura"
+                aria-label="Activar línea de lectura">
+          Línea de lectura
+        </button>
+      </li>
+
+      <li role="none">
+        <button id="Subrayar" type="button" data-accion="subrayar"
+                aria-label="Subrayar texto seleccionado">
+          Subrayar Texto
+        </button>
+      </li>
+
+      <li role="none">
+        <button id="LectordeVoz" type="button" data-accion="lectorVoz"
+                aria-label="Leer texto seleccionado en voz alta">
+          Lectura de Voz
+        </button>
+      </li>
+
+      <li role="none">
+        <button id="ReiniciarCambios" type="button" data-accion="reiniciar"
+                aria-label="Reiniciar todos los cambios">
+          Reiniciar Cambios
+        </button>
+      </li>
+
+    </ul>
+
+    <script src="browser-polyfill.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

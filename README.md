@@ -8,4 +8,4 @@ Sight Assit es una extension de Navegador que consiste de un menú que se permit
 - Lectura de voz: En caso de que al usuario se tenga dificultades para leer, el usuario dispone de esta opción para activar una lectura automática del texto seleccionado.
 - Reiniciar Cambios: Desactiva todos los cambios de las opciones anteriores que se hayan mantenido activas.
 
-Esta extension esta diseñado como una solucion para aquellos usarios que, por alguna discapcidad visual, se les dificulte leer el texto de una pagina web. 
+Esta extension esta diseñado como una solucion para aquellos usuarios que, por alguna discapcidad visual, se les dificulte leer el contenido de una pagina web. 
